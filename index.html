@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grove Letter</title>
+    <!-- 引入外部 CSS 样式 -->
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+
+    <!-- 顶部导航 -->
+    <header>
+        <a href="index.html" class="logo-link">
+            <img src="./assets/images/logo.png" alt="Grove Letter" class="logo">
+        </a>
+        
+        <!-- 汉堡菜单按钮 (手机端显示) -->
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <nav class="nav-links">
+            <a href="#" class="active">Home</a>
+            <a href="#">About</a>
+            <a href="#">Atlas</a>
+            <a href="#">Tour</a>
+            <a href="#">Adopt</a>
+            <a href="#">Jams</a>
+            <a href="#">Shop</a>
+        </nav>
+    </header>
+
+    <!-- 页面核心区域 -->
+    <main>
+        <!-- 图片聚合舞台 -->
+        <div class="scene">
+            <!-- 底部的纸箱底色 -->
+            <div class="box-base"></div>
+
+            <!-- 所有单独的素材图片 -->
+            <div class="item-wrapper item-folder">
+                <img src="./assets/images/卷宗.png" alt="Folder">
+            </div>
+            
+            <div class="item-wrapper item-fruit">
+                <img src="./assets/images/水果.png" alt="Fruit">
+            </div>
+
+            <div class="item-wrapper item-card">
+                <img src="./assets/images/卡片.png" alt="Card">
+            </div>
+            
+            <div class="item-wrapper item-parcel">
+                <img src="./assets/images/包裹.png" alt="Parcel">
+            </div>
+            
+            <div class="item-wrapper item-map">
+                <img src="./assets/images/地图.png" alt="Map">
+            </div>
+            
+            <div class="item-wrapper item-jam">
+                <img src="./assets/images/果酱.png" alt="Jam">
+            </div>
+        </div>
+
+        <!-- 底部文字 -->
+        <div class="description">
+            We are an archive dedicated to sharing the orchard's richness.<br>
+            Click each item below to uncover its story.
+        </div>
+    </main>
+
+    <!-- 简单的 JS 脚本，用于控制手机端菜单的开关 -->
+    <script>
+        const menu = document.querySelector('#mobile-menu');
+        const menuLinks = document.querySelector('.nav-links');
+
+        menu.addEventListener('click', function() {
+            menu.classList.toggle('is-active');
+            menuLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
